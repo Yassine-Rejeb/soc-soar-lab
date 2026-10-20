@@ -1,0 +1,39 @@
+services:
+  thehive-db:
+    image: postgres:14
+    container_name: thehive-db
+    environment:
+      POSTGRES_DB: thehive
+      POSTGRES_USER: hive
+      POSTGRES_PASSWORD: hivepass
+    volumes:
+      - thehive-db-data:/var/lib/postgresql/data
+    networks:
+      - app-net
+
+  thehive:
+    image: strangebee/thehive:5.1
+    container_name: thehive
+    depends_on:
+      - thehive-db
+    environment:
+      - DATABASE_TYPE=postgres
+      - DATABASE_HOST=thehive-db
+      - DATABASE_NAME=thehive
+      - DATABASE_USER=hive
+      - DATABASE_PASSWORD=hivepass
+    volumes:
+      - ./application.conf:/etc/thehive/application.conf:ro
+      - ./logback.xml:/etc/thehive/logback.xml:ro
+    networks:
+      - app-net
+    ports:
+      - "9000:9000"    # forward TheHive web UI
+
+volumes:
+  thehive-db-data:
+
+networks:
+  app-net:
+    driver: bridge
+

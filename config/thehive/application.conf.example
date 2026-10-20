@@ -1,0 +1,9 @@
+db {
+  default {
+    driver = "org.postgresql.Driver"
+    url = "jdbc:postgresql://thehive-db:5432/thehive"
+    user = "CHANGEME"
+    password = "CHANGEME"
+  }
+}
+
