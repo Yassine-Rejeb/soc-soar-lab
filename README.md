@@ -359,5 +359,5 @@ This repository contains no credentials. Every file that held one is published a
 
 ## Related
 
-- Blog post: <a href="https://portfolio.ycnbaqse.com/posts/soc-soar-lab">link</a> to portfolio post
-- tektoSync, an OpenShift GitOps blueprint: <a href="https://github.com/Yassine-Rejeb/tektoSync-The-Cloud-Native-Delivery-Blueprint" >link</a>
+- Blog post: <a target="_blank" href="https://portfolio.ycnbase.com/posts/soc-soar-lab">link</a> to portfolio post
+- tektoSync, an OpenShift GitOps blueprint: <a target="_blank" href="https://github.com/Yassine-Rejeb/tektoSync-The-Cloud-Native-Delivery-Blueprint" >link</a>
